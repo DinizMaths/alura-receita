@@ -1,1 +1,1 @@
-"# alurareceita" 
+# alurareceita
