@@ -11,3 +11,6 @@ class Receita(models.Model):
   rendimento = models.CharField(max_length=100)
   categoria = models.CharField(max_length=100)
   data_receita = models.DateField(default=datetime.now(), blank=True)
+
+  def __str__(self):
+    return self.nome_receita
