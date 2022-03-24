@@ -1,6 +1,5 @@
-from wsgiref.simple_server import demo_app
 from django.db import models
-from datetime import datetime
+import django
 
 # Create your models here.
 class Receita(models.Model):
@@ -10,7 +9,7 @@ class Receita(models.Model):
   tempo_preparo = models.IntegerField()
   rendimento = models.CharField(max_length=100)
   categoria = models.CharField(max_length=100)
-  data_receita = models.DateField(default=datetime.now(), blank=True)
+  data_receita = models.DateField(default=django.utils.timezone.now, blank=True)
 
   def __str__(self):
     return self.nome_receita
